@@ -51,7 +51,6 @@ func getSymbols(w http.ResponseWriter, r *http.Request) {
 	if stockExchanges != "" {
 		url = fmt.Sprintf("https://www.worldtradingdata.com/api/v1/stock?symbol=%s&api_token=%s&stock_exchange=%s", symbols, apiToken, stockExchanges)
 	}
-	//url := "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&api_key=c1572082105bd40d247836b5c1819623&format=json&country=Netherlands"
 	res, err := http.Get(url)
 
 	if err != nil {
